@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Nanda & Nazila</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container Utama Konten -->
+    <div class="main-container">
+        
+        <!-- Section 1: Hero / Foto Pasangan -->
+        <section class="section fade-in">
+            <!-- Video Background Halaman 1 -->
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="bg-video-1" class="bg-video-page">
+                    <source src="video-bg.mp4" type="video/mp4">
+                    Maaf, browser Anda tidak mendukung video latar belakang.
+                </video>
+            </div>
+
+            <!-- Ornamen Daun (Hanya di halaman pertama) -->
+            <div class="leaf-container">
+                <div class="leaf-item leaf-top-left leaf-intro-animation">
+                    <img src="daun-ungu-emas.png" alt="Ornamen Kiri Atas">
+                </div>
+                <div class="leaf-item leaf-bottom-right leaf-intro-animation">
+                    <img src="daun-ungu-bawah.png" alt="Ornamen Kanan Bawah">
+                </div>
+                <div class="leaf-item leaf-bottom-left leaf-intro-animation">
+                    <img src="daun-ungu-bawah-kiri.png" alt="Ornamen Kiri Bawah">
+                </div>
+                <div class="leaf-item leaf-right-gold leaf-intro-animation">
+                    <img src="daun-emas-garis.png" alt="Ornamen Emas">
+                </div>
+            </div>
+
+            <div class="photo-container">
+                <img src="foto-pasangan.jpg" alt="Nanda & Nazila" class="mask-photo">
+            </div>
+            
+            <div class="content-text">
+                <p class="subtitle">The Wedding Of</p>
+                <h1 class="couple-names">Nanda & Nazila</h1>
+                <p class="date">Minggu, 30 Januari 2022</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Ayat atau Pesan Pembuka -->
+        <section class="section fade-in">
+            <!-- Video Background Halaman 2 (Bisa menggunakan file video yang sama atau berbeda) -->
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="bg-video-2" class="bg-video-page">
+                    <source src="video-bg.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="content-text">
+                <p style="font-style: italic; max-width: 400px; margin: 0 auto; line-height: 1.8; color: #666;">
+                    "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya."
+                </p>
+                <p style="margin-top: 20px; font-weight: bold; color: #4a4a4a;">Ar-Rum: 21</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Informasi Acara -->
+        <section class="section fade-in">
+            <!-- Video Background Halaman 3 -->
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="bg-video-3" class="bg-video-page">
+                    <source src="video-bg.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="content-text">
+                <h2 style="letter-spacing: 5px; margin-bottom: 30px; font-weight: normal; text-transform: uppercase;">Waktu & Tempat</h2>
+                
+                <div style="margin-bottom: 40px;">
+                    <h3 style="color: #d4af37; font-family: 'serif'; font-style: italic; font-size: 1.8rem;">Akad Nikah</h3>
+                    <p>08.00 - 10.00 WIB</p>
+                    <p>Kediaman Mempelai Wanita</p>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3 style="color: #d4af37; font-family: 'serif'; font-style: italic; font-size: 1.8rem;">Resepsi</h3>
+                    <p>11.00 WIB - Selesai</p>
+                    <p>Gedung Serbaguna Karimun</p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Script Animasi Scroll -->
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
